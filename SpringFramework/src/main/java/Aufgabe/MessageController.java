@@ -2,6 +2,9 @@ package Aufgabe;
 
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * The controller of the class Message
+ */
 @RestController
 public class MessageController {
 
