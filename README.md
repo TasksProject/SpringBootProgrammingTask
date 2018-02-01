@@ -45,7 +45,7 @@ Dieses Projekt ermöglicht die Erstellung einer kleinen Web-Anwendung mit Java, 
 			]
 	}
 
-##### Schritte zum Starten des Projekts:
+# Schritte zum Starten des Projekts:
 ##### 1. git project clonen in Ihrem SmartGit oder SourceTree.
 ##### 2. Projekt mit IntelliJ starten und build Project
 ##### 3. Eine der Main-Klassen ausführen: CalculatorMain, MessageMain, MultiplierMain oder SystemInfoMain
