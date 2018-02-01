@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SystemInfoController {
 
-    @RequestMapping(value = "GET/api/systemInfo", method = RequestMethod.GET)
+    @RequestMapping(value = "GET/api/systeminfo", method = RequestMethod.GET)
     public SystemInfo convertSystemInfoToJson() {
         return new SystemInfo();
     }
