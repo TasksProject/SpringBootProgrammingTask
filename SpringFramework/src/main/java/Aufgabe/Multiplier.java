@@ -16,12 +16,12 @@ public class Multiplier {
 
     /**
      * Konstruktor der Klasse Multiplier.
-     * @param a
-     * @param b
+     * @param firstParameter Erster Parameter
+     * @param secondParameter Zweiter Parameter
      */
-    public Multiplier(int a, int b) {
-        this.a = a;
-        this.b = b;
+    public Multiplier(int firstParameter, int secondParameter) {
+        this.a = firstParameter;
+        this.b = secondParameter;
     }
 
     /**
@@ -51,10 +51,10 @@ public class Multiplier {
 
     /**
      * Diese Methode berechnet die Multiplikation der Parameter a und b und setzt das Ergebnis in result.
-     * @param a
-     * @param b
+     * @param a Der erste Parameter der Multiplikation.
+     * @param b Der zweite Parameter der Multiplikation.
      */
     public void doMultiplication(int a, int b) {
-        result = a*b;
+        result = a * b;
     }
 }

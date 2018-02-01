@@ -15,7 +15,7 @@ public class MessageController {
     /**
      * Diese Methode nimmt Ihre Nachricht und gibt sie als JSON züruck. Also sie übersetzt Ihre Message in JSON.
      * Dafür wird die Methode (convertObjectToJSON) der Klasse CreateJSON aufgerufen.
-     * @param message
+     * @param message Die Nachricht, die als JSON zurückgegeben werden soll.
      * @return Ihre Nachricht oder Ihr Text als JSON im Browser.
      */
     @RequestMapping(value = "GET/api/echo", params = {"message"},method = RequestMethod.GET)

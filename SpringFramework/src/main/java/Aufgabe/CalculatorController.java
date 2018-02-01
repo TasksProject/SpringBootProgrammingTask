@@ -23,6 +23,8 @@ public class CalculatorController {
     /**
      * Diese Methode liefert die in der Liste von Operationen enthaltene Operation
      * mit ihrem Ergebnis als JSON zurück.
+     * @return Die Liste von Operationen mit ihren Ergebnissen als JSON
+     * @see CreateJSON
      */
     @RequestMapping(value = "POST/api/calculator", method = RequestMethod.GET) //Link zum Starten des HTTP-Request
     @ResponseBody
@@ -33,8 +35,9 @@ public class CalculatorController {
         Operation op3 = new Operation(45,3, "DIVIDE");
         Operation op4 = new Operation(34,52, "SUBTRACT");
         Operation op5 = new Operation(100,243, "ADD");
+        Operation op6 = new Operation(3,5, "MULTIPLY");
         // Wir erstellen die Liste von Operationen, in dem wir die erstellten Operationen in die Operation-Liste einfügen
-        List<Operation> operationList = Arrays.asList(op1, op2, op3, op4, op5);
+        List<Operation> operationList = Arrays.asList(op1, op2, op3, op4, op5, op6);
         Calculator calculator = new Calculator(operationList);
         return CreateJSON.convertObjectToJSON(calculator);
     }

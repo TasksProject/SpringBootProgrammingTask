@@ -20,14 +20,14 @@ public class Operation {
      * @param operator Operator der Operation
      */
     public Operation(int firstOperand, int secondOperand, String operator) {
-        this.p1=firstOperand;
-        this.p2=secondOperand;
-        this.op=operator;
+        this.p1 = firstOperand;
+        this.p2 = secondOperand;
+        this.op = operator;
     }
 
     /**
      * Liefert den ersten Operand zurück.
-     * @return // Erster Operand
+     * @return  Erster Operand
      */
     public int getP1() {
         return p1;
@@ -35,7 +35,7 @@ public class Operation {
 
     /**
      * Gibt den zweiten Operand einer Operation zurück.
-     * @return // Zweiter Operand
+     * @return  Zweiter Operand
      */
     public int getP2() {
         return p2;
@@ -43,7 +43,7 @@ public class Operation {
 
     /**
      * Gibt den Operator einer Operation zurück.
-     * @return
+     * @return Der Operator (ADD, SUBTRACT, MULTIPLY oder DIVIDE) der Operation
      */
     public String getOp() {
         return op;
@@ -51,7 +51,7 @@ public class Operation {
 
     /**
      * Liefert das Ergebnis der Operation zurück.
-     * @return // Ergebnis der Operation
+     * @return  Ergebnis der Operation
      */
     public int getResult() {
         calculateResult(this);
