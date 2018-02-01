@@ -1,5 +1,5 @@
 # SpringBootProgrammingTask
-
+# Projektbeschreibung
 Dieses Projekt ermöglicht die Erstellung einer kleinen Web-Anwendung mit Java, Spring-Boot und Maven, welche folgende HTTP (Rest) Endpunkte anbietet:
 
 ##### 1. GET /api/systemInfo
