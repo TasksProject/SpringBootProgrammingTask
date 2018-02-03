@@ -1,9 +1,5 @@
 package Aufgabe;
 
-import java.lang.management.ManagementFactory;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 /**
  * Diese Klasse SystemInfo ruft die aktuelle Uhrzeit und die Version Ihrer Software auf.
  * @author Maxime Tchangou
@@ -19,15 +15,12 @@ public class SystemInfo {
 
     /**
      * Konstruktor der Klasse SystemInfo.
-     * Dieses Konstuktor kümmert sich darum, aus den Klassen Calendar und SimpleDateFormat die aktuelle Uhrzeit
-     * und die Version von Ihrem System aufzurufen.
+     * @param currentTime aktuelle Uhrzeit.
+     * @param systemVersion Version von Ihrem System.
      */
-    public SystemInfo() {
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        System.out.println( sdf.format(cal.getTime()) );
-        currentTime = sdf.format(cal.getTime());
-        systemVersion = ManagementFactory.getRuntimeMXBean().getVmVersion();
+    public SystemInfo(String currentTime, String systemVersion) {
+        this.currentTime = currentTime;
+        this.systemVersion = systemVersion;
     }
 
     /**

@@ -8,22 +8,21 @@ package Aufgabe;
 public class Message {
     /**
      * Die aktuelle Nachricht als String.
-     *
      * @since 1.0
      */
     private String message; //Deklaration
 
     /**
-     * Kontruktor der Klasse Message
-     * @param yourMessage der Text oder die Nachricht, der oder die in der Web-Anwendung angezeigt werden soll.
+     * Konstruktor der Klasse Message. Dabei wird nur das Message gesetzt.
+     * @param message der Text oder die Nachricht, der oder die in der Web-Anwendung angezeigt werden soll.
      */
-    public Message(String yourMessage) {
-        this.message = yourMessage;
+    public Message(String message) {
+        this.message = message;
     }
 
     /**
      * Gibt die Nachricht bzw. den Text zurück.
-     * @return Message
+     * @return Das Message bzw. die Nachricht als String zurück.
      */
     public String getMessage() {
         return message;

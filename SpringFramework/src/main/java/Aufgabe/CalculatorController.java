@@ -1,12 +1,6 @@
 package Aufgabe;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Arrays;
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Dies ist die Dokumentation der Klasse CalculatorController.
@@ -15,30 +9,28 @@ import java.util.List;
  * Am Ende werden die Operationen mit ihren Ergebnissen als JSON angezeigt.
  * @author Maxime Tchangou
  * @see Calculator
- * @see CreateJSON
+ * @see Operations
  */
 @RestController
 public class CalculatorController {
 
     /**
-     * Diese Methode liefert die in der Liste von Operationen enthaltene Operation
-     * mit ihrem Ergebnis als JSON zurück.
-     * @return Die Liste von Operationen mit ihren Ergebnissen als JSON
-     * @see CreateJSON
+     * Es wird zurückgeliefert, falls die Applikation im Browser gestartet wird.
+     * Dieses Controller wird mit Postman getestet.
+     * @return Ein String für den Fehler.
      */
-    @RequestMapping(value = "POST/api/calculator", method = RequestMethod.GET) //Link zum Starten des HTTP-Request
-    @ResponseBody
-    public String displayAPICalculator(){
-        //  Wir erstellen erstmal einige Beispiele von Operationen.
-        Operation op1 = new Operation(12,45, "ADD");
-        Operation op2 = new Operation(12, 45, "MULTIPLY");
-        Operation op3 = new Operation(45,3, "DIVIDE");
-        Operation op4 = new Operation(34,52, "SUBTRACT");
-        Operation op5 = new Operation(100,243, "ADD");
-        Operation op6 = new Operation(3,5, "MULTIPLY");
-        // Wir erstellen die Liste von Operationen, in dem wir die erstellten Operationen in die Operation-Liste einfügen
-        List<Operation> operationList = Arrays.asList(op1, op2, op3, op4, op5, op6);
-        Calculator calculator = new Calculator(operationList);
-        return CreateJSON.convertObjectToJSON(calculator);
+    @GetMapping("/api/calculator") //Link zum Starten des HTTP-Request
+    public String getNotSupportedMessage(){
+        return "GET is not supported!";
+    }
+
+    /**
+     * Diese Methode liefert die in der Liste von Operationen enthaltenen Operationen mit ihrem Ergebnis als JSON zurück.
+     * @param operations Die Operationen als JSON, für die das Ergebnis zu berechnen ist.
+     * @return Die Operationen mit ihren Ergebnissen als JSON.
+     */
+    @PostMapping("/api/calculator") //Link zum Starten des HTTP-Request
+    public Operations calculateOperations(@RequestBody Operations operations){
+        return new Calculator(operations).getOperations();
     }
 }

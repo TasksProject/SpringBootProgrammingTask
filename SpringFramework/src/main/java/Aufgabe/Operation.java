@@ -2,43 +2,70 @@ package Aufgabe;
 
 /**
  * Dies ist die Dokumentation der Klasse Operation.
- * Eine Operation enthält zwei Operaden, einen Operator und das Ergebnis, das am Ende der Operation
- * zurückgeliefert werden soll.
+ * Eine Operation enthält zwei Operaden, einen Operator und das Ergebnis, das am Ende der Operation zurückgeliefert werden soll.
  * @author Maxime Tchangou
  * @version 1.0
  */
 public class Operation {
-    int p1; // Erster Operand
-    int p2; // Zweiter Operand
-    String op; // der Operator
-    int result; // Das Ergebnis der Operation
 
     /**
-     * Konstruktor der Klasse Operation.
-     * @param firstOperand Erster Operand der Operation
-     * @param secondOperand  Zweiter Operand der Operation
-     * @param operator Operator der Operation
+     * Alle Elemente, die eine Operation enthält.
      */
-    public Operation(int firstOperand, int secondOperand, String operator) {
-        this.p1 = firstOperand;
-        this.p2 = secondOperand;
-        this.op = operator;
+    private double p1; // Erster Operand
+    private double p2; // Zweiter Operand
+    private String op; // der Operator
+    private double result; // Das Ergebnis der Operation
+
+    /**
+     * Leeres Konstruktor für die Klasse Operation.
+     */
+    public Operation() {
     }
 
     /**
-     * Liefert den ersten Operand zurück.
+     * Konstruktor für die Klasse Operation mit enthaltenen Parametern.
+     * @param p1 Erster Parameter
+     * @param p2 Zweiter Parameter
+     * @param op Operator der Berechnung
+     * @param result Ergebnis der Berechnung
+     */
+    public Operation(double p1, double p2, String op, double result) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.op = op;
+        this.result = result;
+    }
+
+    /**
+     * Liefert den ersten Operand einer Operation zurück.
      * @return  Erster Operand
      */
-    public int getP1() {
+    public double getP1() {
         return p1;
+    }
+
+    /**
+     * Setzt den ersten Operand.
+     * @param p1 Erster Operand der Operation.
+     */
+    public void setP1(double p1) {
+        this.p1 = p1;
     }
 
     /**
      * Gibt den zweiten Operand einer Operation zurück.
      * @return  Zweiter Operand
      */
-    public int getP2() {
+    public double getP2() {
         return p2;
+    }
+
+    /**
+     * Setzt den zweiten Operand.
+     * @param p2 Zweiter Operand der Operation.
+     */
+    public void setP2(double p2) {
+        this.p2 = p2;
     }
 
     /**
@@ -50,36 +77,26 @@ public class Operation {
     }
 
     /**
+     * Setzt den Operator der Operation.
+     * @param op Operator der Operation.
+     */
+    public void setOp(String op) {
+        this.op = op;
+    }
+
+    /**
      * Liefert das Ergebnis der Operation zurück.
      * @return  Ergebnis der Operation
      */
-    public int getResult() {
-        calculateResult(this);
+    public double getResult() {
         return result;
     }
 
     /**
-     * Diese Methode berechnet das Ergebnis einer Operation und setzt das Ergebnis als result.
-     * @param operation Die Operation, die wir berechnen wollen.
+     * Setzt das Ergebnis der Berechnung der Operation.
+     * @param result Ergebnis der Berechnung der Operation.
      */
-    public void calculateResult(Operation operation) {
-        String operator = operation.getOp();
-        switch (operator){
-            case "ADD":
-                result = operation.getP1() + operation.getP2();
-                break;
-            case "MULTIPLY":
-                result = operation.getP1() * operation.getP2();
-                break;
-            case "SUBTRACT":
-                result = operation.getP1() - operation.getP2();
-                break;
-            case "DIVIDE":
-                result = operation.getP1() / operation.getP2();
-                break;
-            default:
-                System.out.println("Something is wrong. Please check the structure of your operations.");
-                break;
-        }
+    public void setResult(double result) {
+        this.result = result;
     }
 }

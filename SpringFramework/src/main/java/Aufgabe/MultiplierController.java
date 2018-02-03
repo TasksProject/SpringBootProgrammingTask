@@ -7,22 +7,24 @@ import org.springframework.web.bind.annotation.*;
  * Wie die anderen Controller in diesem Projekt hilft er dabei, die Web-Anwendung im Browser anzuzeigen.
  * @author Maxime Tchangou
  * @version 1.0
- * @see CreateJSON Übersetzt Ihre Message in JSON.
+ * @see Multiplier
  */
 @RestController
 public class MultiplierController {
 
-    @RequestMapping(value = "GET/api/multiplier/{a}/{b}", method = RequestMethod.GET)
-    @ResponseBody
     /**
-     * Diese Controller-Methode nimmt die beiden Path-Variablen und liefert das Ergebnis Ihrer Multiplikation zurück.
+     * Diese Controller-Methode nimmt die beiden Path-Variablen und liefert das Ergebnis ihrer Multiplikation zurück.
      * @param a Erster Parameter
      * @param b Zweiter Parameter
      * @return Eine Mutiplikation zweier Integer-Variablen
      * @see Multiplier
      */
-    public Multiplier convertMultiplierToJson(@PathVariable String a, @PathVariable String b) {
-        return new Multiplier(Integer.parseInt(a),Integer.parseInt(b));
+    @GetMapping("/api/multiplier/{a}/{b}")
+    public Multiplier getMultiplierResult(@PathVariable String a, @PathVariable String b) {
+        int aInt = Integer.parseInt(a); // Cast den String a in Integer
+        int bInt = Integer.parseInt(b); // Cast den String b in Integer
+        int result = aInt * bInt; // Berechnet die Multiplikation beider Zahlen
+        return new Multiplier(aInt, bInt, result);
     }
 }
 

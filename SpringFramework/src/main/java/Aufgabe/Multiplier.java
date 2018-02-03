@@ -8,7 +8,7 @@ package Aufgabe;
 public class Multiplier {
 
     /**
-     * Die zwei Zahlen, für die die Multiplikation berechnet werden soll.
+     * Die beiden Integer-Zahlen, für die die Multiplikation berechnet werden soll.
      */
     private int a; // Erster Parameter
     private int b; // Zweiter Parameter
@@ -16,12 +16,14 @@ public class Multiplier {
 
     /**
      * Konstruktor der Klasse Multiplier.
-     * @param firstParameter Erster Parameter
-     * @param secondParameter Zweiter Parameter
+     * @param a Erster Parameter
+     * @param b Zweiter Parameter
+     * @param result Ergebnis der Multiplikation von a und b.
      */
-    public Multiplier(int firstParameter, int secondParameter) {
-        this.a = firstParameter;
-        this.b = secondParameter;
+    public Multiplier(int a, int b, int result) {
+        this.a = a;
+        this.b = b;
+        this.result = result;
     }
 
     /**
@@ -45,16 +47,7 @@ public class Multiplier {
      * @return Ergebnis der Multiplikation.
      */
     public int getResult() {
-        doMultiplication(a,b);
         return result;
     }
 
-    /**
-     * Diese Methode berechnet die Multiplikation der Parameter a und b und setzt das Ergebnis in result.
-     * @param a Der erste Parameter der Multiplikation.
-     * @param b Der zweite Parameter der Multiplikation.
-     */
-    public void doMultiplication(int a, int b) {
-        result = a * b;
-    }
 }
