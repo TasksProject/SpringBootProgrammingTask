@@ -4,14 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Dokumentation der Klasse CalculatorMain. Sie ist die Main-Klasse für die Klasse Calculator.
+ * Sie ist die Main-Klasse zum starten der Spring Application.
  * Sie dient zum Starten der Web-Anwendung.
  * @author Maxime Tchangou
  * @version 1.0
  */
 @SpringBootApplication
-public class CalculatorMain {
+public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(CalculatorMain.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }
