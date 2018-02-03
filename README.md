@@ -47,10 +47,10 @@ Dieses Projekt ermöglicht die Erstellung einer kleinen Web-Anwendung mit Java, 
 
 # Schritte zum Starten des Projekts:
 ##### 1. git project clonen in Ihrem SmartGit oder SourceTree.
-##### 2. Projekt mit IntelliJ starten und build Project
-##### 3. Eine der Main-Klassen ausführen: CalculatorMain, MessageMain, MultiplierMain oder SystemInfoMain
+##### 2. Projekt mit IntelliJ starten und build Project.
+##### 3. Die Main-Klasse Application ausführen.
 ##### 4. In Ihrem Browser folgenden Link eingeben zum Starten der HTTP-Anfragen:
-		- localhost:8181/GET/api/systeminfo
-		- localhost:8181/GET/api/echo?message=WriteYourMessageHere
-		- localhost:8181/GET/api/multiplier/first/second  -----> zB: localhost:8181/GET/api/multiplier/5/5
-		- localhost:8181/POST/api/calculator
+		- localhost:8181/api/systeminfo
+		- localhost:8181/api/echo?message=WriteYourMessageHere
+		- localhost:8181/api/multiplier/first/second  -----> zB: localhost:8181/GET/api/multiplier/5/5
+		- localhost:8181/api/calculator -----> Diese Anwendung wurde mit Postman getestet. Einfach herunterladen, Link eingeben, einstellen auf POST und einige Beispielen von Operationen berechnen lassen.
