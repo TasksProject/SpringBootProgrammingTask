@@ -65,7 +65,7 @@ public class Calculator {
                 operation.setResult(operation.getP1() / operation.getP2());
             break;
             default:
-                log.error("Something is wrong. Please check the structure of your operations.");
+                log.error("Something is wrong. Please check the parameters from the structure of your operations.");
                 break;
         }
         return operation;
